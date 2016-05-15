@@ -1,0 +1,17 @@
+.bar-transparent {
+    background: transparent;
+    .title {
+        color: #444;
+    }
+}
+
+.bar {
+	&.bar-energized {
+        border-color: transparent !important;
+    }
+    .button {
+        &.button-icon:before {
+            font-size: 24px !important;
+        }
+    }
+}

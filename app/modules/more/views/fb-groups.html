@@ -1,0 +1,18 @@
+<ion-view view-title="FB Groups" ng-cloak>
+    <ion-nav-bar class="nav-title-slide-ios7 bar-royal">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="bg-grey">
+        <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div>
+        <div class="list" ng-hide="ctrl.isLoading">
+            <a class="item item-avatar item-icon-right" ng-repeat="group in ctrl.groups" ui-sref="app.more.fbgroup_details({id: group.GroupID})">
+                <img ng-src="{{app.cdn}}/fb-groups/{{group.GroupIcon}}?w=80&h=80&mode=crop">
+                <h2>{{group.GroupName}}</h2>
+                <p>{{group.GroupType || 'closed group'}}</p>
+                <i class="icon ion-ios-plus-empty"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

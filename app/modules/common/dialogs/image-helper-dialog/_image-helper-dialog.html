@@ -1,0 +1,29 @@
+<ion-modal-view class="image-dialog" ng-cloak>
+    <ion-header-bar align-title="center" class="bar-royal">
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+        <h1 class="title">Image Dialog</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="modalCtrl.confirm()">confirm</button>
+        </div>
+    </ion-header-bar>
+    <ion-content layout="column">
+        <div ng-if="modalCtrl.item.uploadedFile ==null">
+            <img ng-src="{{modalCtrl.item.previewFile}}" class="img-responsive">
+        </div>
+        <div layout="row" style="height:450px;" ng-if="modalCtrl.item.uploadedFile !=null">
+            <img-crop image="modalCtrl.item.uploadedFile" result-image="modalCtrl.item.croppedFile" aspect-ratio="modalCtrl.ratio" area-type="rectangle" init-max-area="true" , result-image-quality="1.0" , result-image-size="{w:modalCtrl.option.targetWidth,h:modalCtrl.option.targetHeight}" , result-image-format="image/jpeg"></img-crop>
+        </div>
+        <div class="image-dialog-buttons" layout="row">
+            <button class="button button-royal" flex ng-click="modalCtrl.openCamera()"><i class="icon ion-ios-camera-outline"></i> From Camera</button>
+            <button class="button button-calm" flex ng-click="modalCtrl.openGallery()"><i class="icon ion-images"></i> From Gallery</button>
+        </div>
+        <div class="image-instruction" ng-if="modalCtrl.hasInstruction">
+            <p class="p-10"><strong>Instruction:</strong></p>
+            <div class="video-container">
+                <youtube video="{{modalCtrl.instructionVideoID}}" class="youtube" autoplay="false" html5video="true" recommended="false"></youtube>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

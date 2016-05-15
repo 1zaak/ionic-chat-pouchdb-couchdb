@@ -1,0 +1,13 @@
+.account-register {
+    background: url(#{$accountAssetPath}/bg_register.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .md-title {
+        color: #69358a;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .button-account {
+        background-color: rgba(236, 64, 122, 1);
+    }
+}

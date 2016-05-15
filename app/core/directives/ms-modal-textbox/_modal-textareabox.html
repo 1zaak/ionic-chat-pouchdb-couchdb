@@ -1,0 +1,19 @@
+<ion-modal-view class="image-dialog" ng-cloak>
+    <ion-header-bar align-title="center" class="bar-royal">
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+        <h1 class="title">Edit {{modalCtrl.cObject.placeholder}}</h1>
+    </ion-header-bar>
+    <ion-content layout="column">
+        <form class="list" name="myform" novalidate ng-submit="modalCtrl.submit(myform.$valid)">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">{{modalCtrl.cObject.placeholder}}</span>
+                <textarea name="mytextbox" placeholder="{{modalCtrl.cObject.placeholder}}" ng-model="modalCtrl.cObject.value" rows="5"></textarea>
+            </label>
+            <div layout-padding>
+                <button type="submit" class="button button-block button-calm" ng-disabled="myform.$invalid">Confirm</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

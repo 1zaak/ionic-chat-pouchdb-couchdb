@@ -1,0 +1,31 @@
+{
+  "name": "imagenie",
+  "version": "0.0.3",
+  "description": "Image manipulation made easy (JS library)",
+  "main": "src/imagenie.js",
+  "keywords": [
+    "image",
+    "graphics",
+    "canvas",
+    "parser",
+    "javascript",
+    "web",
+    "manipulate",
+    "photo"
+  ],
+  "authors": [
+    "Nir Elbaz"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nire0510/imagenie",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "karma.conf.js",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}

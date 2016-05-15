@@ -1,0 +1,15 @@
+.platform-ios {
+	.popover, .scroll-content {
+		border-radius: 0 !important;
+	}
+}
+
+.platform-android {
+	.popover {
+		margin-top: 0 !important;
+
+		.item {
+			border-color: #ddd;
+		}
+	}
+}

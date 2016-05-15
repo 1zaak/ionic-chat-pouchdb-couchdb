@@ -1,0 +1,25 @@
+<ion-view view-title="Recover Password" ng-cloak class="account-home">
+    <ion-content layout="column" layout-padding>
+        <form name="myform" flex layout="column" layout-align="center none" ng-submit="ctrl.submit(myform.$valid)">
+            
+            <div layout="column" layout-align="center center" class="mt-10">
+                <section class="account-form-wrapper forgot-form">
+                    <div class="list">
+                        <label class="item item-input" modal-select ng-model="ctrl.country" options="ctrl.availableCountries" modal-title="Select a country">
+                            <div class="option">
+                                {{option.name}}
+                            </div>
+                            <i class="zmdi zmdi-globe-alt zmdi-hc-lg"></i>
+                            <input type="text" placeholder="{{ctrl.country.name || 'Country'}}" readonly="true">
+                        </label>
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-smartphone-android zmdi-hc-lg"></i>
+                            <input type="tel" placeholder="Mobile No.">
+                        </label>
+                    </div>
+                    <button class="button button-full button-account">Request Password Reset</button>
+                </section>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+{
+    "ACCOUNT_HOME": {
+        "BTN_PRIVACY": "Privacy Policy",
+        "BTN_TNC": "Terms & Conditions",
+        "BTN_LOGIN": "SIGN IN WITH MOBILE",
+        "BTN_REGISTER": "JOIN US - REGISTER NOW"
+    },
+    "LOGIN": {
+        "MTEXT": "Login to your account",
+        "BTN_LOGIN": "Login",
+        "BTN_FORGOTPASSWORD": "Forgot your password?",
+        "BTN_SIGNUP": "Sign Up Now!"
+    }
+}

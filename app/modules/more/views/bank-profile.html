@@ -1,0 +1,32 @@
+<ion-view class="profile-page" view-title="My Bank Info">
+    <form name="myform" novalidate>
+        <ion-nav-bar class="nav-title-slide-ios7 bar-royal">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="secondary">
+                <button class="button button-clear" type="submit" ng-disabled="ctrl.isLoading || myform.$invalid" ng-click="ctrl.update(myform.$valid)">
+                    <span ng-hide="ctrl.isLoading">update</span>
+                    <span ng-show="ctrl.isLoading"><ion-spinner icon="ios-small" class="spinner-light"></ion-spinner></span>
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-content>
+            <!-- <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div> -->
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Bank Name</span>
+                    <input name="BankName" type="text" placeholder="example: Maybank" ng-model="ctrl.item.BankName" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Account Name</span>
+                    <input name="AccountName" type="text" placeholder="example: John Doe" ng-model="ctrl.item.AccountName" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Account No</span>
+                    <input name="AccountNumber" type="tel" placeholder="example: 7676 2321 7876" ng-model="ctrl.item.AccountNumber" required>
+                </label>
+            </div>
+        </ion-content>
+    </form>
+</ion-view>

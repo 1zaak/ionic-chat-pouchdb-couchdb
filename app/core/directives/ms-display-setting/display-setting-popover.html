@@ -1,0 +1,19 @@
+<div class="article-popover-setting" layout="column">
+    <div layout="row" class="setting-group">
+        <p>字体大小</p>
+        <div class="range range-balanced" flex>
+            <input type="range" name="volume" min="17" max="27" ng-model="modalCtrl.styledata.fs">
+        </div>
+    </div>
+    <div layout="row" class="setting-group">
+        <p flex>夜间模式</p>
+        <div>
+            <label class="toggle toggle-dark">
+                <input type="checkbox" ng-model="modalCtrl.styledata.nm">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+    </div>
+</div>

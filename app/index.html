@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <!-- ionic meta tags -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- custom meta tags -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ECOGIV BUYER</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" href="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css core/styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="core/styles/main.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body ng-app="myapp" ng-controller="mainCtrl as app">
+    
+    <!-- the nav bar will be updated as we navigate between views -->
+    <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
+    <!-- the current view will be rendered in the <ion-nav-view> directive -->
+    <ion-nav-view name="main"></ion-nav-view>
+    <!-- will be a 404 during development -->
+    <script src="cordova.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/localforage/dist/localforage.js"></script>
+    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/picturefill/picturefill.js"></script>
+    <script src="bower_components/angular-picturefill/angular-picturefill.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/angular-localforage/dist/angular-localForage.js"></script>
+    <script src="bower_components/imagenie/src/imagenie.js"></script>
+    <script src="bower_components/ionic-modal-select/dist/ionic-modal-select.js"></script>
+    <script src="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/angular-youtube-embed/dist/angular-youtube-embed.js"></script>
+    <script src="bower_components/ionic-toast/src/ionic-toast.js"></script>
+    <script src="bower_components/ionic-fancy-select/src/ionic-fancy-select.js"></script>
+    <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
+    <script src="bower_components/angular-pouchdb/angular-pouchdb.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <script src="modules/more/more.module.js"></script>
+    <script src="modules/more/controllers/more.shop-profile.controller.js"></script>
+    <script src="modules/more/controllers/more.main-profile.controller.js"></script>
+    <script src="modules/more/controllers/more.home.controller.js"></script>
+    <script src="modules/more/controllers/more.fb-groups.controller.js"></script>
+    <script src="modules/more/controllers/more.fb-group-details.controller.js"></script>
+    <script src="modules/more/controllers/more.bank-profile.controller.js"></script>
+    <script src="modules/more/api/api.more.js"></script>
+    <script src="modules/home/home.module.js"></script>
+    <script src="modules/home/controllers/home.seller-profile.controller.js"></script>
+    <script src="modules/home/controllers/home.product-list.controller.js"></script>
+    <script src="modules/home/controllers/home.product-details.controller.js"></script>
+    <script src="modules/home/controllers/home.category-list.controller.js"></script>
+    <script src="modules/home/api/api.home.js"></script>
+    <script src="modules/common/dialogs/image-zoomin-dialog/image.zoomin.dialog.controller.js"></script>
+    <script src="core/main.module.js"></script>
+    <script src="modules/common/dialogs/image-helper-dialog/image.helper.dialog.controller.js"></script>
+    <script src="modules/chat/chat.module.js"></script>
+    <script src="modules/chat/controller/chat.chat-list.controller.js"></script>
+    <script src="modules/chat/controller/chat.chat-followers.controller.js"></script>
+    <script src="modules/chat/api/api.js"></script>
+    <script src="modules/activity/activity.module.js"></script>
+    <script src="modules/account/account.module.js"></script>
+    <script src="modules/account/controllers/dialog.tnc.controller.js"></script>
+    <script src="modules/account/controllers/dialog.privacy.controller.js"></script>
+    <script src="modules/account/controllers/account.verify.controller.js"></script>
+    <script src="modules/account/controllers/account.reset-password.controller.js"></script>
+    <script src="modules/account/controllers/account.register-success.controller.js"></script>
+    <script src="modules/account/controllers/account.register.controller.js"></script>
+    <script src="modules/account/controllers/account.login.controller.js"></script>
+    <script src="modules/account/controllers/account.home.controller.js"></script>
+    <script src="modules/account/controllers/account.forgot.controller.js"></script>
+    <script src="modules/account/api/api.account.js"></script>
+    <script src="core/services/utils/util.service.js"></script>
+    <script src="core/services/utils/my.modal.service.js"></script>
+    <script src="core/services/utils/image.service.js"></script>
+    <script src="core/services/utils/chat.service.js"></script>
+    <script src="core/services/utils/auth-helper.js"></script>
+    <script src="core/services/utils/app.modal.service.js"></script>
+    <script src="core/services/data-services/localstorage.js"></script>
+    <script src="core/main.run.js"></script>
+    <script src="core/main.controller.js"></script>
+    <script src="core/main.config.js"></script>
+    <script src="core/filters/local-date.js"></script>
+    <script src="core/filters/list-item-filter.js"></script>
+    <script src="core/directives/my-profile/my-profile.js"></script>
+    <script src="core/directives/ms-view-password/ms-view-password.js"></script>
+    <script src="core/directives/ms-radio-group/ms-radio-group.js"></script>
+    <script src="core/directives/ms-modal-textbox/ms-modal-textbox.js"></script>
+    <script src="core/directives/ms-modal-textbox/ms-modal-textbox.controller.js"></script>
+    <script src="core/directives/ms-modal-tag/ms-modal-tagbox.controller.js"></script>
+    <script src="core/directives/ms-modal-tag/ms-modal-tag.js"></script>
+    <script src="core/directives/ms-modal-numpad/ms-modal-numpad.js"></script>
+    <script src="core/directives/ms-modal-numpad/ms-modal-numberbox.controller.js"></script>
+    <script src="core/directives/ms-lazy-loader/ms-lazy-loader.js"></script>
+    <script src="core/directives/ms-display-setting/ms-display-setting.js"></script>
+    <script src="core/directives/ms-banner/ms-banner.js"></script>
+    <script src="core/directives/custom-img/custom-img.js"></script>
+    <script src="core/directives/custom-bg/custom-bg.js"></script>
+    <script src="core/constants/config-const.js"></script>
+    <script src="core/constants/appsettings.constant.js"></script>
+    <script src="app.module.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+    <script src="modules/chat/controller/chat.chat-details.controller.js"></script>
+    
+</body>
+
+</html>

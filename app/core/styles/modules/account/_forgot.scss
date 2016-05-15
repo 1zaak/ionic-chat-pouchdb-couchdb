@@ -1,0 +1,13 @@
+.forgot-form {
+    .item-input {
+        border-color: #fff;
+        
+        input::placeholder {
+            color: #fff;
+        }
+        i {
+            color: #fff;
+            margin-right: 10px;
+        }
+    }
+}

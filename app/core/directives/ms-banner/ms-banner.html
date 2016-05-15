@@ -1,0 +1,7 @@
+<ion-slide-box auto-play="true" show-pager="false">
+    <ion-slide ng-repeat="b in directive.banners">
+        <span picture-fill data-alt="{{b.BannerTitle}}" ng-if="b.ImageSrc" class="img-responsive">
+        	<span pf-src="{{directive.cdn}}/banners/{{b.ImageSrc}}"></span>
+        </span>
+    </ion-slide>
+</ion-slide-box>

@@ -1,0 +1,48 @@
+$accountAssetPath: "../assets/images/account";
+.account-form-wrapper {
+    width: 90%;
+    max-width: 90%;
+    .button-account {
+        background: rgba(56, 31, 85, 0.76);
+        color: #fff;
+        border-radius: 6px;
+        min-height: 34px;
+        line-height: 34px;
+        padding: 0;
+    }
+    .item-input {
+        padding: 6px 0 5px 0px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #444;
+        margin-bottom: 15px;
+        input[readonly] {
+            background-color: transparent;
+        }
+        input::placeholder {
+            color: #444;
+        }
+        i {
+            color: #444;
+            margin-right: 10px;
+        }
+    }
+    &.white {
+        i {
+            color: #fff;
+            text-shadow: 1px 2px 3px #3c3c3c;
+        }
+        input {
+            color: #fff;
+        }
+        input::placeholder {
+            color: #fff;
+        }
+    }
+}
+
+@import "account/home";
+@import "account/login";
+@import "account/register";
+@import "account/forgot";
+@import "account/success";

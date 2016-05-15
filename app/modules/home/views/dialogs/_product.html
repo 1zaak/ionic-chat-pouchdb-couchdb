@@ -1,0 +1,135 @@
+<ion-modal-view class="product-details">
+    <ion-header-bar align-title="center" class="bar-royal">
+        <h1 class="title">{{modalCtrl.item.Id}}</h1>
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content layout="column" lazy-scroll overflow-scroll="true">
+        <div class="main-image">
+            <i class="zoomin zmdi zmdi-zoom-in zmdi-hc-3x" ng-click="modalCtrl.showImageZoomIn(modalCtrl.Thumbnail)"></i>
+            <custom-img thumbnail="modalCtrl.Thumbnail" ratio="'img-ratio-1-1'"></custom-img>
+        </div>
+        <div layout="row">
+            <div class="x-scroller">
+                <div class="myimage" ng-repeat="img in modalCtrl.item.Imagelist track by $index" ng-class="{'selected':img.Selected}">
+                    <custom-img thumbnail="img.Url" ratio="'img-ratio-1-1'" ng-click="modalCtrl.changeDisplayImage(img)"></custom-img>
+                </div>
+            </div>
+        </div>
+        <div class="basic-info pt-10 pl-20 pr-20" layout="column">
+            <p class="id">ID:  {{modalCtrl.item.Id}} </p>
+            <p class="t"> {{modalCtrl.item.ProductTitle}}</p>
+            <p><span class="p-date">listed {{modalCtrl.item.JoinPeriod}} hours ago by</span><span class="s-name"> {{modalCtrl.item.SellerName}}</span></p>
+        </div>
+        <div layout="row" class="details-content pl-20 pt-10 pr-20" layout-wrap>
+            <div flex="10" layout-align="center center" layout>
+                <i class="icon ion-ios-pricetags larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Price </span>
+                <br> <span> {{modalCtrl.item.Price | currency: 'RM '}} </span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-happy larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Delivery Time </span>
+                <br> <span> {{modalCtrl.item.DeliveryTime}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-scissors larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Offer Price </span>
+                <br> <span class="bold">  {{modalCtrl.item.OfferPrice | currency: 'RM '}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-thumbsup larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Shipping fee </span>
+                <br> <span>{{modalCtrl.item.ShippingFee}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-location larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Location </span>
+                <br> <span> {{modalCtrl.item.Location}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-ios-color-wand larger"></i>
+            </div>
+            <div flex="40" class="content-i">
+                <span class="text"> Brand Name </span>
+                <br> <span> {{modalCtrl.item.Brand}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-ios-plus-outline larger"></i>
+            </div>
+            <div flex="90" class="content-i">
+                <span class="text"> Variations </span>
+                <br> <span> Color: {{modalCtrl.item.Color}}</span>
+                <br> <span> Size: {{modalCtrl.item.Size}}</span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-ios-information-outline larger"></i>
+            </div>
+            <div flex="90" class="content-i">
+                <span> - {{modalCtrl.item.Info1}}  </span>
+                <br> <span> - {{modalCtrl.item.Info2}}   </span>
+                <br> <span> - {{modalCtrl.item.Info3}}  </span>
+            </div>
+            <div flex="10" class="content-i" layout-align="center center" layout>
+                <i class="icon ion-ios-heart-outline larger"></i>
+            </div>
+            <div flex="90" class="content-i">
+                <span class="pink"> {{modalCtrl.item.Likes}} likes </span>
+            </div>
+        </div>
+        <div flex="100" class="content-bg">
+            <p>Share This Listing</p>
+        </div>
+        <br>
+        <div layout="row" layout-align="center center" layout-margin>
+            <i class="zmdi zmdi-hc-2x zmdi-whatsapp"></i>
+            <i class="zmdi zmdi-hc-2x zmdi-twitter"></i>
+            <i class="zmdi zmdi-hc-2x zmdi-facebook"></i>
+            <i class="zmdi zmdi-hc-2x zmdi-share"></i>
+        </div>
+        <br>
+        <div flex="100" class="content-bg">
+            <p>Meet The Seller</p>
+        </div>
+        <br>
+        <div class="boxes" flex layout-margin layout="row">
+            <div layout layout-align="center center">
+                <img ng-src="http://lorempixel.com/50/50/people/2" class="img-circle">
+            </div>
+            <div flex ng-click="modalCtrl.showSellerProfile(modalCtrl.Id)">
+                <span class="primary">{{modalCtrl.item.SellerName}}</span>
+                <p class="j-date">Joined {{modalCtrl.item.JoinPeriod}} weeks ago</p>
+            </div>
+        </div>
+        <br>
+        <div layout="row" layout-wrap class="action-bar-footer">
+            <button class="button button-clear" flex>
+                <i class="icon ion-ios-chatbubble-outline"></i> &nbsp;&nbsp; Chat with Seller
+            </button>
+            <button class="button button-clear" flex ui-sref="app.home.offer">
+                <i class="icon ion-cash"></i> &nbsp;&nbsp; Make an offer
+            </button>
+            <button class="button button-clear" flex ui-sref="app.home.buy">
+                <i class="icon ion-ios-cart"></i> &nbsp;&nbsp; Buy this item
+            </button>
+        </div>
+        <div layout="row" layout-wrap>
+            <div flex="100" class="content-bg-blank">
+            </div>
+        </div>
+        <label class="item item-input">
+            <input type="text" placeholder="Post a New Comment">
+        </label>
+    </ion-content>
+</ion-modal-view>

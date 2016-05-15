@@ -1,0 +1,13 @@
+<ion-modal-view class="image-zoomin">
+    <ion-header-bar align-title="center" class="bar-royal">
+        <h1 class="title">{{modalCtrl.item.Title}}</h1>
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content overflow-scroll="true">
+    	<ion-scroll zooming="true" direction="xy">
+    		<img src="http://placehold.it/3000x3000">
+    	</ion-scroll>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,14 @@
+.image-dialog {
+    .preview-block {
+        //commonAssetPath
+        background: url(#{$commonAssetPath}/upload-image-placeholder.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 200px;
+        height: auto;
+        width:100%;
+        background-color: #f0f0f0;
+
+    }
+}

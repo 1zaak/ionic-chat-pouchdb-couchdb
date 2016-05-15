@@ -1,0 +1,38 @@
+<ion-view class="profile-page">
+    <ion-content class="grey-300-bg no-header">
+        <ion-nav-bar class="nav-title-slide-ios7 bar-clear">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div>
+        <section ng-hide="ctrl.isLoading">
+            <div class="my-profile" layout="column" layout-align="center none" style="background-image: url({{ctrl.item.CoverPic}});">
+                <div class="profile-info">
+                    <img src="{{ctrl.item.ProfilePic}}" class="profile-pic">
+                    <h2>{{ctrl.item.Fullname}}</h2>
+                    <p>({{ctrl.item.UserNo}})</p>
+                </div>
+            </div>
+            <div class="share-buttons" layout="row">
+                <button class="button" flex ng-click="ctrl.changeProfilePic()"><i class="icon ion-ios-camera-outline"></i> Change Profile Pic</button>
+                <button class="button" flex ng-click="ctrl.changeCoverPic()"><i class="icon ion-ios-camera"></i> Change Cover Pic</button>
+            </div>
+            <div class="list">
+                <ms-modal-textbox type="'text'" value="ctrl.item.Fullname" icon="'zmdi-account-box'" placeholder="'Fullname'" update="ctrl.partialUpdate(result)">
+                </ms-modal-textbox>
+                <ms-modal-textbox type="'email'" value="ctrl.item.Email" icon="'zmdi-email'" placeholder="'Email Address'" update="ctrl.partialUpdate(result)">
+                </ms-modal-textbox>
+                <a class="item item-icon-left">
+                    <i class="icon zmdi zmdi-smartphone-android"></i> {{ctrl.item.MobileNo}}
+                </a>
+                <a class="item item-icon-left item-verification" ng-click="ctrl.requestICVerification()" ng-class="{'item-icon-right': ctrl.item.ICVerified ==2}">
+                    <i class="icon zmdi zmdi-accounts-list-alt"></i> I.C Verification
+                    <span class="item-note" ng-if="ctrl.item.ICVerified === 0">verify now</span>
+                    <span class="item-note" ng-if="ctrl.item.ICVerified === 1">Pending Approval</span>
+                    <i class="icon zmdi zmdi-check-all" ng-if="ctrl.item.ICVerified ===2"></i>
+                </a>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

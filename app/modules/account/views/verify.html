@@ -1,0 +1,18 @@
+<ion-view view-title="Verify Account" ng-cloak class="account-home" hide-back-button="true">
+    <ion-content layout="column" layout-padding>
+        <form name="myform" novalidate flex layout="column" layout-align="center none" ng-submit="ctrl.submit(myform.$valid)">
+            <div layout="column" layout-align="center center" class="mt-10">
+                <section class="account-form-wrapper forgot-form white">
+                    <div class="list">
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-smartphone-android zmdi-hc-lg"></i>
+                            <input type="tel" placeholder="Verification Code" ng-model="ctrl.item.code" required>
+                        </label>
+                    </div>
+                    <p class="white-fg text-center"><small>key-in the verification code that we sent to your phone!</small></p>
+                    <button type="submit" class="button button-full button-account" md-ink-ripple="#ffffff" ng-disabled="myform.$invalid">VERIFY NOW</button>
+                </section>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

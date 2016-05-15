@@ -1,0 +1,67 @@
+.dashboard-page {
+    padding-top:40px;
+    .my-profile {
+        position: relative;
+        min-height: 250px;
+        background: center center no-repeat;
+        background-size: cover;
+        background-color: #f0f0f0;
+        .btn-setting {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .profile-pic {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 50%;
+        }
+        .profile-info {
+            text-align: center;
+            h2 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+        .profile-buttons {
+            color: #fff;
+            font-size: 0.8em;
+            span {
+                background-color: rgba(255, 255, 255, 0.7);
+                color: $pink;
+                border-radius: 10px;
+                padding: 2px 10px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .share-buttons {
+        button {
+            color: #69358a;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #eee;
+            font-size: 0.8em;
+            border-radius: 0;
+            padding: 0;
+        }
+    }
+    .dashboard-action-list {
+        .icon {
+            color: $purple;
+        }
+        .t {
+            font-size: 0.9em;
+            padding: 0 10px;
+            color: #aaa;
+        }
+        .v {
+            font-size: 2em;
+            float: right;
+            color: #d25900;
+            padding: 0 10px;
+        }
+    }
+}

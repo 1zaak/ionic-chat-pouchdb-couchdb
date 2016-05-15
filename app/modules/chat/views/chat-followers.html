@@ -1,0 +1,15 @@
+<ion-view view-title="Chat">
+    
+    <ion-content layout="column">
+        <div ng-repeat="follower in ctrl.lists">
+            <div class="mycard chat-border" flex layout-margin layout="row" ui-sref="app.chat.chat_details({ otherUserId: follower.userId, otherUsername: follower.username})">
+                <div layout layout-align="center center"><img ng-src="{{chat.doc.profilePic}}" class="img-circle res"></div>
+                <div flex layout-margin style="margin-left: 0px;">
+                    <p class="chat-name"> {{follower.username}}  </p>
+                    <p class="chat-msg"> {{follower.userId | uppercase}} </p>
+                </div>
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+.fade-in {
+    @include fadeIn();
+}
+
+.zoom-in {
+    @include zoomIn();
+}
+
+.bounce-in {
+    @include bounceIn();
+}
+
+.modal-slide-up {
+    @include slideInUp($duration: 400ms);
+}
+
+.modal-slide-up.ng-leave,
+.modal-slide-up > ng-leave {
+    @include slideOutDown();
+}
+
+.modal-slide-left {
+    @include slideInRight($duration: 400ms);
+}
+
+.modal-slide-left.ng-leave,
+.modal-slide-left > ng-leave {
+    @include slideOutRight();
+}

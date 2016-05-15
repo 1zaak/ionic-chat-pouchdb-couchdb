@@ -1,0 +1,40 @@
+<ion-view class="profile-page" view-title="My Shop Profile Info">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-royal">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="secondary">
+            <button class="button button-clear" ng-click="ctrl.update()" ng-disabled="ctrl.isLoading">
+                <span ng-hide="ctrl.isLoading">update</span>
+                <span ng-show="ctrl.isLoading"><ion-spinner icon="ios-small" class="spinner-light"></ion-spinner></span>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Shop Name</span>
+                <input type="text" placeholder="example: Cool Flower Teddy Shop" ng-model="ctrl.item.ShopName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Company Name</span>
+                <input type="text" placeholder="example: Some Company Sdn Bhd" ng-model="ctrl.item.CompanyName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">ROC</span>
+                <input type="text" placeholder="example: 16162625-X" ng-model="ctrl.item.ROC">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">GST Reg No.</span>
+                <input type="text" placeholder="example: 5431833761" ng-model="ctrl.item.GSTRegNo">
+            </label>
+            <a class="item item-icon-left item-verification" ng-if="ctrl.item.ROCVerified ==0" ng-click="ctrl.requestROCVerification()">
+                <i class="icon zmdi zmdi-accounts-list-alt"></i> ROC Verification
+                <span class="item-note">verify now</span>
+            </a>
+            <a class="item item-icon-left" ng-if="ctrl.item.ROCVerified == 1 || ctrl.item.ROCVerified ==2" ng-class="{'item-icon-right': ctrl.item.ROCVerified ==2}">
+                <i class="icon zmdi zmdi-accounts-list-alt"></i> ROC Verified
+                <i class="icon zmdi zmdi-check-all" ng-if="ctrl.item.ROCVerified ==2"></i>
+                <span class="item-note" ng-if="ctrl.item.ROCVerified ==1">Pending Approval</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

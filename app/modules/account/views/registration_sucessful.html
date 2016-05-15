@@ -1,0 +1,17 @@
+<ion-view view-title="{{ctrl.UserNo}}" ng-cloak class="account-success" hide-back-button="true">
+    <ion-content layout="column" scroll="false" layout-padding>
+        <section flex layout="column" layout-align="space-between none" class="text-center">
+            <div></div>
+            <div>
+                <img src="core/assets/images/account/check_icon.png">
+                <h1 class="md-title white-fg">Congratulation!</h1>
+                <h2 class="md-subhead white-fg">Your account has been verified</h2>
+                <p class="white-fg">please wait....</p>
+            </div>
+            <div class="userno">
+                <h3 class="white-fg">Your Seller ID:</h3>
+                <h1 class="lime-500-fg">{{ctrl.item.UserNo}}</h1>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+.account-login {
+    background: url(#{$accountAssetPath}/bg_login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .button-account {
+        background-color: rgba(105, 53, 138, 1);
+    }
+}

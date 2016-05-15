@@ -1,0 +1,18 @@
+.account-home {
+    background: url(#{$accountAssetPath}/bg_account.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .footer {
+    	a {
+    		font-weight: bold;
+    		color: #fff;
+    		padding: 0 10px;
+
+    		&:hover, &:active {
+    			color: #000;
+    		}
+    	}
+    }
+}

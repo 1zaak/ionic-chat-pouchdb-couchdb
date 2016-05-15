@@ -1,0 +1,34 @@
+<ion-view ng-cloak>
+    <ion-nav-bar class="nav-title-slide-ios7 bar-royal">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-title>{{ctrl.group.GroupName}}</ion-nav-title>
+    </ion-nav-bar>
+    <ion-content>
+        <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div>
+        <div ng-hide="ctrl.isLoading" layout="column">
+            <img src="{{app.cdn}}/fb-groups/{{ctrl.group.AppCover}}?w=420&h=210&mode=crop" class="fb-cover-pic">
+            <div layout="column">
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Group Info">
+                        <md-content layout-padding>
+                            <p class="md-body-1">{{ctrl.group.GroupDescription}}</p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Rules">
+                        <md-content layout-padding>
+                            <p class="md-body-1" ng-bind-html="ctrl.group.Rules"></p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar-clear">
+        <md-button class="md-raised md-accent" flex ng-if="ctrl.group.IsMember==0" ng-click="ctrl.joinnow()">JOIN NOW</md-button>
+        <md-button class="md-raised md-primary" flex ng-if="ctrl.group.IsMember==1" ng-disabled="true">
+            <span>Pending Approval</span>
+        </md-button>
+    </ion-footer-bar>
+</ion-view>

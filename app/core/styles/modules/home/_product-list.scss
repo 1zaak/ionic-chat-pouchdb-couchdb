@@ -1,0 +1,36 @@
+            .product-list {
+                margin: 0px;
+                .product-list-item {
+                    .list:last-child.card {
+                        margin-bottom: 0px;
+                    }
+                    .action-bar {
+                        padding: 10px 0px;
+                        .icon-btn {
+                            border-right: 1px solid #ddd;
+                            &:last-child {
+                                border-right: none;
+                            }
+                        }
+                    }
+                    .item-name-details p {
+                        font-weight: 600;
+                        margin-top: -8px;
+                        height: 10px;
+                        font-size: 12px;
+                        &:last-child {
+                            color: #EC407A;
+                        }
+                    }
+                    .avatar {
+                        p {
+                            margin-top: -44px;
+                            margin-left: 50px;
+                            &:last-child {
+                                margin-left: 50px;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ruizon.ecogivbuyer" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ecogiv-buyer-app</name>
+    <description>
+        Ecogiv buyer app description will be here
+    </description>
+    <author email="admin@ruizon.com.my" href="http://www.ruizon.com.my">
+        M N Hasan
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="SplashScreen" value="screen" />
+        <preference name="SplashScreenDelay" value="2000" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="CameraUsesGeolocation" value="false" />
+        <preference name="ShowSplashScreenSpinner" value="false" />
+    </platform>
+    <engine name="ios" spec="~3.9.2" />
+    <plugin name="cordova-plugin-device" spec="~1.1.1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.2.0" />
+    <plugin name="com.ionic.keyboard" spec="~1.0.4" />
+    <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="~3.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.1.0" />
+    <plugin name="cordova-plugin-camera" spec="~2.1.0" />
+    <plugin name="phonegap-facebook-plugin" spec="/Users/mnhasan/Downloads/phonegap-facebook-plugin-master">
+        <variable name="APP_ID" value="1509055352739634" />
+        <variable name="APP_NAME" value="Ecogiv" />
+    </plugin>
+    <plugin name="cordova-plugin-x-socialsharing" spec="https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" />
+    <plugin name="cordova-instagram-plugin" spec="https://github.com/vstirbu/InstagramPlugin.git" />
+    <plugin name="com.cordova.plugins.sms" spec="https://github.com/cordova-sms/cordova-sms-plugin.git" />
+    <plugin name="cordova-plugin-app-version" spec="https://github.com/whiteoctober/cordova-plugin-app-version.git" />
+</widget>

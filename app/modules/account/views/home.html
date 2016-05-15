@@ -1,0 +1,19 @@
+<ion-view view-title="ECOGIV" ng-cloak class="account-home">
+    <ion-content layout="column" scroll="false" layout-padding>
+        <section flex layout="column" layout-align="center none">
+            <div>
+                <img src="core/assets/images/account/app_logo_hd.png" class="img-responsive">
+            </div>
+            <md-button class="md-primary md-raised" ui-sref="account.login" translate="ACCOUNT_HOME.BTN_LOGIN">
+                <i class="zmdi zmdi-lock-open zmdi-hc-lg"></i> SIGN IN WITH MOBILE
+            </md-button>
+            <md-button class="md-accent md-raised" ui-sref="account.register" translate="ACCOUNT_HOME.BTN_REGISTER">
+                <i class="zmdi zmdi-accounts-outline zmdi-hc-lg"></i> JOIN US - REGISTER NOW
+            </md-button>
+        </section>
+    </ion-content>
+    <ion-footer-bar class="footer bar-clear" layout="row" layout-align="center center">
+        <md-button translate="ACCOUNT_HOME.BTN_PRIVACY" ng-click="ctrl.showPrivacyDialog()">Privacy Policy</md-button>
+        <md-button translate="ACCOUNT_HOME.BTN_TNC" ng-click="ctrl.showTNCDialog()">Terms & Conditions</md-button>
+    </ion-footer-bar>
+</ion-view>

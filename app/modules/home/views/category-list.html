@@ -1,0 +1,13 @@
+<ion-view view-title="Home" ng-cloak class="category-page">
+    <ion-nav-buttons side="right">
+        <button class="button"><i class="zmdi zmdi-notifications  zmdi-hc-lg"></i></button>
+    </ion-nav-buttons>
+    <ion-content layout="column" scroll="true" class="padding" lazy-scroll>
+        <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div>
+        <div class="home-cat" ng-repeat="cat in ctrl.categories" ui-sref="app.home.product_list({id:cat.CategoryID, name:cat.CategoryName})">
+            <custom-img thumbnail="cat.Thumbnail" ratio="'img-ratio-category-thumb'"></custom-img>
+        </div>
+    </ion-content>
+</ion-view>

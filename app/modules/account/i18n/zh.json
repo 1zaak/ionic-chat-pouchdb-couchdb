@@ -1,0 +1,15 @@
+{
+    "ACCOUNT_HOME": {
+        "BTN_PRIVACY": "隐私政策",
+        "BTN_TNC": "条款和条件",
+        "BTN_LOGIN": "拍在与移动",
+        "BTN_REGISTER": "注册 - 现在注册"
+    },
+    "LOGIN": {
+        "MTEXT": "登录到您的帐户",
+        "BTN_LOGIN": "登录",
+        "BTN_FORGOTPASSWORD": "忘记密码了吗?",
+        "BTN_SIGNUP": "立即注册!",
+        "LBL_COUNTRY": "TEST"
+    }
+}

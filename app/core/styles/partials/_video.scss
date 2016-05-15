@@ -1,0 +1,43 @@
+.video-container {
+    background-color: #ddd;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+}
+
+.youtube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.youtube-link {
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: center center, center center;
+}

@@ -1,0 +1,48 @@
+<ion-view view-title="{{ctrl.title}}" class="product-list">
+    <ion-nav-buttons side="right">
+        <button class="button"><i class="zmdi zmdi-notifications zmdi-hc-lg"></i></button>
+    </ion-nav-buttons>
+    <ion-content layout="column">
+        <div ng-if="ctrl.isLoading" layout="column" layout-padding layout-align="center center">
+            <ion-spinner icon="crescent" class="spinner-energized"></ion-spinner>
+        </div>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Keyword Search">
+            </label>
+        </div>
+        <div class="product-list" layout="row" layout-wrap>
+            <div class="product-list-item" ng-repeat="cat in ctrl.products" flex="50" ng-click="ctrl.showProductDetails(cat.PostID)">
+                <div class="list card">
+                    <div class="item avatar">
+                        <custom-img thumbnail="cat.SellerPic" ratio="'img-ratio-product-thumb'"></custom-img>
+                        <!-- <img src="{{cat.SellerPic}}"> -->
+                        <p>{{cat.SellerName}}</p>
+                        <p class="ion-ios-clock-outline"> 2h</p>
+                    </div>
+                    <div class="item item-body item-name-details">
+                        <p>{{cat.Title}}</p>
+                        <p>{{cat.Price}}</p>
+                    </div>
+                    <div class="item item-image">
+                        <custom-img thumbnail="cat.Thumbnail" ratio="'img-ratio-productlist-thumb'"></custom-img>
+                    </div>
+                    <div layout="row" class="action-bar">
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-ios-heart-outline"></span>
+                            <span>{{cat.Likes}}</span>
+                        </div>
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-ios-chatbubble-outline"></span>
+                            <span>{{cat.Comments}}</span>
+                        </div>
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-android-share-alt"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

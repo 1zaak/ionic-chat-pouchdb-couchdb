@@ -1,0 +1,67 @@
+.new-post {
+    .main-image {
+        margin-bottom: -47px;
+        .main-image-actions {
+            position: relative;
+            bottom: 47px;
+            min-height: 47px;
+            .button {
+                background-color: rgba(255, 255, 255, 0.5);
+                color: red;
+            }
+        }
+    }
+    .btn-add-picture {
+        width: 80px;
+        background-color: #ddd;
+        color: #3c3c3c;
+        text-align: center;
+        height: 80px;
+        min-width: 80px;
+        margin: 5px;
+    }
+    .x-scroller {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: 90px;
+        .myimage {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            background: #ddd;
+            margin: 5px;
+            &.selected {
+                img {
+                    border: 3px solid $purple;
+                }
+            }
+        }
+    }
+    .list {
+        .item {
+            min-height: 54px !important;
+            input {
+                margin-left: 38px;
+            }
+            &.item-icon-right {
+                padding-right: 16px;
+            }
+        }
+        .icon {
+            color: $purple;
+            font-size: 24px !important;
+        }
+    }
+
+    .item-grandtotal {
+        background-color: #f5f5f5;
+        color: $purple;
+        font-weight: bold;
+
+        .item-note {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<ion-view view-title="Chat">
+   
+    <ion-content layout="column">
+        <div layout="column" layout-margin>
+            <div flex layout="row" ng-repeat="chat in ctrl.details" ng-class="{'layout-align-start-center':chat.type === 'self', 'layout-align-end-center':chat.type === 'other'}" layout-margin>
+                <div class="mt-0" ng-class="{'talk-bubble-right tri-right round left-in':chat.type === 'self', 'talk-bubble-left tri-left round right-in':chat.type === 'other'}">
+                    <div class="talktext">
+                        <p>{{chat.message}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div flex layout="row" layout-align="end center">
+                <div class="talk-bubble-left tri-left round right-in mt-10">
+                    <div class="talktext">
+                        <p>{{chat.ChatMsg}}</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="left" keyboard-attach class="chat-footer">
+        <div class="buttons">
+            <button class="button"><i class="zmdi zmdi-hc-2x zmdi-upload"></i></button>
+        </div>
+        <input id="newMessage" type="text" placeholder="" flex>
+        <div class="buttons">
+            <button class="button"> <i class="zmdi zmdi-hc-2x zmdi-camera-add"></i> </button>
+        </div>
+        <div class="buttons" >
+            <button class="button" ng-click="ctrl.testClick()">Send</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

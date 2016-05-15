@@ -1,0 +1,44 @@
+<ion-view ng-cloak class="account-register">
+    <ion-content layout="column" layout-padding>
+        <form name="myform" novalidate flex layout="column" layout-align="center none" ng-submit="ctrl.submit(myform.$valid)">
+            <div class="text-center">
+                <h2 class="md-title">Sign Up Now!</h2>
+            </div>
+            <div layout="column" layout-align="center center">
+                <section class="account-form-wrapper white">
+                    <div class="list">
+                        <label class="item item-input" modal-select ng-model="ctrl.item.country" options="ctrl.availableCountries" modal-title="Select a country">
+                            <div class="option">
+                                {{option.name}}
+                            </div>
+                            <i class="zmdi zmdi-globe-alt zmdi-hc-lg"></i>
+                            <input name="country" type="text" placeholder="{{ctrl.item.country.name || 'Country'}}" readonly="true" required>
+                            <i class="zmdi zmdi-chevron-right zmdi-hc-2x"></i>
+                        </label>
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-smartphone-android zmdi-hc-lg"></i>
+                            <input name="mobile" type="tel" placeholder="Mobile No." ng-model="ctrl.item.mobile" required>
+                        </label>
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-email zmdi-hc-lg"></i>
+                            <input name="fullname" type="text" placeholder="Full Name" ng-model="ctrl.item.fullname" required>
+                        </label>
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-email zmdi-hc-lg"></i>
+                            <input name="email" type="email" placeholder="Email Address" ng-model="ctrl.item.email" required>
+                        </label>
+                        <div class="item item-input">
+                            <i class="zmdi zmdi-key zmdi-hc-lg"></i>
+                            <input name="password" type="password" placeholder="Password" ng-model="ctrl.item.password" required>
+                            <i class="zmdi zmdi-eye zmdi-hc-lg" ms-view-password></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-full button-account" md-ink-ripple="#ffffff" ng-disabled="myform.$invalid">Submit</button>
+                    <div layout="column" class="mt-30" layout-align="center center">
+                        <a ui-sref="account.login">Already a member? Login now!</a>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

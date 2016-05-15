@@ -1,0 +1,17 @@
+<ion-view view-title="Chat">
+    <ion-nav-buttons side="right">
+        <button ui-sref="app.chat.followers" class="button"><i class="icon ion-android-add"></i></button>
+    </ion-nav-buttons>
+    <ion-content layout="column">
+        <div ng-repeat="chat in ctrl.lists">
+            <div class="mycard chat-border" flex layout-margin layout="row" ui-sref="app.chat.chat_details({ otherUserId: chat.id, otherUsername: chat.name})">
+                <div layout layout-align="center center"><img ng-src="{{chat.doc.profilePic}}" class="img-circle res"></div>
+                <div flex layout-margin style="margin-left: 0px;">
+                    <p class="chat-name"> {{chat.name}} ({{chat.id | uppercase}})     <span ng-if="chat.messageCounter !== NaN || chat.messageCounter > 0" class="badge badge-assertive ">{{chat.messageCounter}}</span></p>
+                    <p class="chat-msg"> {{chat.lastMessage}} </p>
+                </div>
+                <span ng-if="chat.timestamp !== undefined" am-time-ago="chat.timestamp | amFromUnix" " class="chat-grey " layout layout-align="center center "> </span>             
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

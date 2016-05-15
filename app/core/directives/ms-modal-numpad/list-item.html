@@ -1,0 +1,7 @@
+<a class="item item-icon-left item-icon-right" ng-click="dialog.showInputModal()">
+    <i class="icon zmdi" ng-class="icon"></i>
+    <span>{{dialog.note || dialog.placeholder}}</span>
+    <span class="item-note" ng-if="dialog.type=='price' && dialog.value">MYR {{dialog.value}}</span> 
+    <span class="item-note" ng-if="dialog.type=='percentage' && dialog.value">{{dialog.value}} %</span>
+    <i class="icon zmdi zmdi-edit" ng-hide="dialog.type=='price' || dialog.type=='percentage'"></i>
+</a>

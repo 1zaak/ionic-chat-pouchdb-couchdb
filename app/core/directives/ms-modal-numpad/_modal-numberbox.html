@@ -1,0 +1,42 @@
+<ion-modal-view class="image-dialog" ng-cloak>
+    <ion-header-bar align-title="center" class="bar-royal">
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+        <h1 class="title">Enter a value</h1>
+    </ion-header-bar>
+    <ion-content layout="column" scroll="false">
+        <div class="content" flex layout="column" layout-align="center center">
+            <h2 class="md-display-1 purple-500-fg">
+               <span ng-if="modalCtrl.cObject.type == 'price'">MYR </span>{{modalCtrl.displayValue || 0.00}}<small ng-if="modalCtrl.cObject.type == 'percentage'">%</small>
+            </h2>
+        </div>
+        <div layout="column" layout-padding layout-margin layout-align="center center">
+            <md-button class="md-fab md-primay" ng-click="modalCtrl.submit()">
+                <md-icon md-font-icon="zmdi zmdi-check zmdi-hc-2x"></md-icon>
+            </md-button>
+        </div>
+        <div class="custom-keyboard" layout="column">
+            <div layout="row buttons">
+                <button class="button key-button" flex ng-click="modalCtrl.add('1')">1</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('2')">2</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('3')">3</button>
+            </div>
+            <div layout="row buttons">
+                <button class="button key-button" flex ng-click="modalCtrl.add('4')">4</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('5')">5</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('6')">6</button>
+            </div>
+            <div layout="row buttons">
+                <button class="button key-button" flex ng-click="modalCtrl.add('7')">7</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('8')">8</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('9')">9</button>
+            </div>
+            <div layout="row buttons">
+                <button class="button key-button" flex ng-click="modalCtrl.add('.')">.</button>
+                <button class="button key-button" flex ng-click="modalCtrl.add('0')">0</button>
+                <button class="button button-assertive icon ion-backspace" flex ng-click="modalCtrl.remove()"></button>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,53 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+
+$light: #fff !default;
+$stable: #f8f8f8 !default;
+$positive: #ffc107 !default;
+$calm: #43cee6 !default;
+$balanced: #66cc33 !default;
+$energized: #ec407a !default;
+$assertive: #ef4e3a !default;
+$royal: #ec407a !default;
+$dark: #444 !default;
+$purple: #69358a;
+$grey: #9b9a9a;
+$pink: #ec407a;
+$yellow: #efc100;
+$brown1: #794f1c;
+$brown2: #a48352;
+$blue: #266ebf;
+
+// The path for our ionicons font files, relative to the built & temporary main.css
+$ionicons-font-path: "../assets/fonts" !default;
+$zmdi-font-path: "../assets/fonts" !default;
+// Include all of Ionic
+@import "../../bower_components/ionic/scss/ionic";
+@import "../../bower_components/material-design-iconic-font/scss/material-design-iconic-font";
+@import "../../bower_components/animatewithsass/animate.scss";
+@import "partials/variables";
+@import "partials/resets";
+@import "partials/colors";
+@import "partials/animations";
+@import "partials/header";
+@import "partials/tabs";
+@import "partials/popover";
+@import "partials/buttons";
+@import "partials/modal";
+@import "partials/horizontal-card";
+@import "partials/utils";
+@import "partials/video";
+@import "plugins/material-overrides";
+@import "plugins/toast";
+
+@import "modules/common";
+@import "modules/account";
+@import "modules/home";
+@import "modules/chat";
+
+//@import "modules/post";
+// @import "modules/more";

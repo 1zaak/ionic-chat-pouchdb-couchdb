@@ -1,0 +1,68 @@
+<ion-modal-view class="seller-profile">
+    <ion-header-bar align-title="center" class="bar-royal">
+        <h1 class="title">{{modalCtrl.item.SellerName}}</h1>
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content layout="column" lazy-scroll overflow-scroll="true">
+        <div class="profile-img" style="background-image: url({{modalCtrl.item.CoverPic}});">
+            <button class="button profile-follow">
+                Follow
+            </button>
+            <div layout="row" layout-align="center center">
+                <img ng-src="{{modalCtrl.item.SellerPic}}" class="md-avatar">
+            </div>
+            <div layout-align="center center" layout="column">
+                <p class="md-title">{{modalCtrl.item.SellerName}}</p>
+                <p class="md-subhead ">{{modalCtrl.item.SellerId}}</p>
+            </div>
+        </div>
+        <div class="profile-mgb" layout="row" layout-align="space-around center">
+            <div flex="30 " align="center">
+                <span class="buyer-profile-bar "> {{modalCtrl.item.Followers}}</span>
+                <span class="profile-box">&nbsp; Followers </span>
+            </div>
+            <div flex="40 " align="center">
+                <span class="buyer-profile-bar "> {{modalCtrl.item.Likes}} </span>
+                <span class="profile-box "> &nbsp; Likes </span>
+            </div>
+            <div flex="30 " align="center ">
+                <span class="buyer-profile-bar "> {{modalCtrl.item.Viewed}} </span>
+                <span class="profile-box "> &nbsp; Viewed </span>
+            </div>
+        </div>
+        <div class="product-list" layout="row" layout-wrap>
+            <div class="product-list-item" ng-repeat="item in modalCtrl.item.Imagelist" flex="50">
+                <div class="list card">
+                    <div class="item avatar">
+                        <custom-img thumbnail="modalCtrl.item.SellerPic" ratio="'img-ratio-product-thumb'"></custom-img>
+                        <!-- <img src="{{cat.SellerPic}}"> -->
+                        <p>{{modalCtrl.item.SellerName}}</p>
+                        <p class="ion-ios-clock-outline">{{modalCtrl.item.JoinPeriod}}h</p>
+                    </div>
+                    <div class="item item-body item-name-details">
+                        <p>{{modalCtrl.item.Title}}</p>
+                        <p>{{modalCtrl.item.Price | currency: 'RM '}}</p>
+                    </div>
+                    <div class="item item-image">
+                        <custom-img thumbnail="modalCtrl.item.Thumbnail" ratio="'img-ratio-productlist-thumb'"></custom-img>
+                    </div>
+                    <div layout="row" class="action-bar">
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-ios-heart-outline"></span> &nbsp; 
+                            <span>{{modalCtrl.item.Likes}}</span>
+                        </div>
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-ios-chatbubble-outline"></span>
+                            <span>{{modalCtrl.item.Comments}}</span>
+                        </div>
+                        <div flex layout-align="center center" layout="row" class="icon-btn">
+                            <span class="icon ion-android-share-alt"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,42 @@
+{
+  "author": "TipsTrade Ltd.",
+  "name": "ionic-fancy-select",
+  "homepage": "https://github.com/tipstrade/ionic-fancy-select",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tipstrade/ionic-fancy-select.git"
+  },
+  "main": [
+    "./src/ionic-fancy-select.js",
+    "./templates/item-template.html",
+    "./templates/modal-template.html"
+  ],
+  "dependencies": {
+    "angular": "^1/2"
+  },
+  "authors": [
+    "TipsTrade Ltd."
+  ],
+  "description": "A Fancy Select for Ionic Framework",
+  "keywords": [
+    "Ionic",
+    "multiselect"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "167a8bf2cd",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "167a8bf2cd7d2b73e3869bbb91b921eeb1715c77"
+  },
+  "_source": "https://github.com/tipstrade/ionic-fancy-select.git",
+  "_target": "*",
+  "_originalSource": "ionic-fancy-select"
+}

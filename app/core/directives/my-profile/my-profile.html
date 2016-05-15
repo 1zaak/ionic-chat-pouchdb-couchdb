@@ -1,0 +1,23 @@
+<div class="my-profile lazy-wrapper" style="background-image: url({{directive.item.CoverPic}});">
+    <div layout="column" layout-align="center center" layout-fill ng-show="directive.isLoading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div layout="column" layout-align="end none" layout-fill ng-hide="directive.isLoading">
+        <div class="profile-info">
+            <img ng-src="{{directive.item.ProfilePic}}" class="profile-pic">
+            <h2>{{directive.item.Fullname}}</h2>
+            <p>({{directive.item.UserNo}})</p>
+        </div>
+        <div class="profile-buttons" layout="row" layout-padding layout-align="space-between center">
+            <div flex layout="row" layout-align="center center">
+                <span>{{directive.item.Followers || 0}}</span> Followers
+            </div>
+            <div flex layout="row" layout-align="center center">
+                <span>{{directive.item.Likes || 0}}</span> Likes
+            </div>
+            <div flex layout="row" layout-align="center center">
+                <span>{{directive.item.Views || 0}}</span> Viewed
+            </div>
+        </div>
+    </div>
+</div>

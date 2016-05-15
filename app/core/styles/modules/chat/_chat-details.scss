@@ -1,0 +1,98 @@
+/* General CSS Setup */
+
+.inbox-chat {
+    border-radius: 50%;
+    margin-left: 22px;
+    margin-top: 68px;
+}
+
+.chat-footer {
+    //margin-bottom: -323px;
+    // background-color: #F1F1F1;
+    // bottom: 0;
+    // border-top-width: 1px;
+    // border-bottom-width: 0;
+    // background-position: top;
+    // height: 44px;
+    //position: fixed;
+}
+
+
+/* container */
+
+.container {
+    padding: 5% 5%;
+}
+
+
+/* CSS talk bubble */
+
+.talk-bubble-right {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: #E4E4DE;
+}
+
+.talk-bubble-left {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: #F9D7E3;
+}
+
+.border {
+    border: 8px solid #666;
+}
+
+.round {
+    border-radius: 15px;
+    //-webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+
+/* Right triangle, left side slightly down */
+
+.tri-right.left-in:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 20%;
+    bottom: auto;
+    border: 12px solid;
+    border-color: #E4E4DE #E4E4DE transparent transparent;
+}
+
+.tri-left.right-in:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -20px;
+    top: 20%;
+    bottom: auto;
+    border: 12px solid;
+    border-color: #F9D7E3 transparent transparent #F9D7E3;
+}
+
+
+/* talk bubble contents */
+
+.talktext {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.talktext p {
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}

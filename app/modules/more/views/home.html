@@ -1,0 +1,32 @@
+<ion-view view-title="More" ng-cloak class="settings-page">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-royal">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="bg-grey">
+        <div class="list">
+            <a class="item item-icon-left item-icon-right" ui-sref="app.more.main_profile">
+                <i class="icon zmdi zmdi-account-box-o"></i> My Profile
+                <i class="icon ion-ios-arrow-right grey-300-fg"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ui-sref="app.more.shop_profile">
+                <i class="icon zmdi zmdi-shopping-cart-plus"></i> My Shop
+                <i class="icon ion-ios-arrow-right grey-300-fg"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ui-sref="app.more.bank_profile">
+                <i class="icon zmdi zmdi-money-box"></i> Bank Info
+                <i class="icon ion-ios-arrow-right grey-300-fg"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ui-sref="app.more.fbgroup_list">
+                <i class="icon zmdi zmdi-facebook-box"></i> Join Facebook Group
+                <i class="icon ion-ios-arrow-right grey-300-fg"></i>
+            </a>
+            <div class="item item-divider"></div>
+            <a class="item">
+                Current Version: {{ctrl.appVersion}}
+            </a>
+            <a class="item item-icon-left red-500-fg" ng-click="app.logout()">
+                <i class="icon ion-log-out"></i> Logout
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

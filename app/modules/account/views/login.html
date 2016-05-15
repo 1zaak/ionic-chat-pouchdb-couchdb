@@ -1,0 +1,37 @@
+<ion-view ng-cloak class="account-login">
+    <ion-content layout="column" layout-padding>
+        <form name="myform" novalidate flex layout="column" layout-align="center none" ng-submit="ctrl.submit(myform.$valid)">
+            <div class="text-center">
+                <h2 class="md-title" translate="LOGIN.MTEXT">Login to your account</h2>
+            </div>
+            <div layout="column" layout-align="center center">
+                <section class="account-form-wrapper">
+                    <div class="list">
+                        <label class="item item-input" modal-select ng-model="ctrl.item.country" options="ctrl.availableCountries" modal-title="Select a country">
+                            <div class="option">
+                                {{option.name}}
+                            </div>
+                            <i class="zmdi zmdi-globe-alt zmdi-hc-lg"></i>
+                            <input name="country" type="text" placeholder="{{ctrl.item.country.name || 'Country'}}" readonly="true" required>
+                            <i class="zmdi zmdi-chevron-right zmdi-hc-2x"></i>
+                        </label>
+                        <label class="item item-input">
+                            <i class="zmdi zmdi-smartphone-android zmdi-hc-lg"></i>
+                            <input name="mobile" type="tel" placeholder="Mobile No." ng-model="ctrl.item.mobile" required>
+                        </label>
+                        <div class="item item-input">
+                            <i class="zmdi zmdi-key zmdi-hc-lg"></i>
+                            <input name="password" type="password" placeholder="Password" ng-model="ctrl.item.password" required>
+                            <i class="zmdi zmdi-eye zmdi-hc-lg" ms-view-password></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-full button-account" md-ink-ripple="#ffffff" ng-disabled="myform.$invalid" translate="LOGIN.BTN_LOGIN">LOG IN</button>
+                    <div layout="column" class="mt-40" layout-align="center center">
+                        <a ui-sref="account.forgot" translate="LOGIN.BTN_FORGOTPASSWORD">Forgot your password?</a>
+                        <md-button ui-sref="account.register" translate="LOGIN.BTN_SIGNUP">Sign Up Now!</md-button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

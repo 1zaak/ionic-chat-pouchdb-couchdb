@@ -1,0 +1,20 @@
+<ion-modal-view class="image-dialog" ng-cloak>
+    <ion-header-bar align-title="center" class="bar-royal">
+        <div class="buttons">
+            <button class="button button-icon ion-android-close" ng-click="modalCtrl.close()"></button>
+        </div>
+        <h1 class="title">Add {{modalCtrl.cObject.placeholder}}</h1>
+    </ion-header-bar>
+    <ion-content layout="column">
+        <form class="list" name="myform" novalidate ng-submit="modalCtrl.submit(myform.$valid)">
+            <md-chips ng-model="modalCtrl.cObject.value" name="{{modalCtrl.cObject.placeholder}}" md-max-chips="5" placeholder="Type and enter">
+                <md-chip-template>
+                    <strong>{{$chip}}</strong>
+                </md-chip-template>
+            </md-chips>
+            <div layout-padding>
+                <button type="submit" class="button button-block button-calm" ng-disabled="myform.$invalid">Confirm</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

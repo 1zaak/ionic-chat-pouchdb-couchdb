@@ -1,0 +1,40 @@
+md-icon[md-font-icon] {
+    &.zmdi-hc-2x {
+        line-height: 0.25em;
+    }
+}
+
+.md-fab {
+    .zmdi-hc-2x {
+        font-size: 2em;
+        line-height: 2em;
+    }
+}
+
+.bar {
+    .md-button {
+        margin: 0 !important;
+    }
+}
+
+.custom-keyboard {
+    .key-button {
+        border-color: #b2b2b2;
+        background: transparent;
+        color: #3c3c3c;
+        height: 60px;
+        font-size: 30px;
+        border-bottom: none;
+        &.active,
+        &.activated {
+            background: $purple;
+            color: #fff;
+        }
+    }
+    .submit-button {
+        background: $balanced;
+        height: 60px;
+        font-size: 30px;
+        color: #fff;
+    }
+}

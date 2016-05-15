@@ -1,0 +1,7 @@
+<a class="item item-icon-left item-icon-right" ng-click="dialog.showInputModal()">
+    <i class="icon zmdi" ng-class="icon"></i>
+    <span ng-if="dialog.value.length == 0">Select {{dialog.placeholder}}</span>
+    <span ng-if="dialog.value.length > 0">{{dialog.value.length}} {{dialog.placeholder}} selected</span>
+    <span class="item-note">{{dialog.note}}</span>
+    <i class="icon zmdi zmdi-edit"></i>
+</a>
