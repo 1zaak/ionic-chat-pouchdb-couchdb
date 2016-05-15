@@ -15,7 +15,7 @@ This is an Ionic app which is initially started to explore the sync capabilities
 
 
 ## Quick Start
-Clone this repo and just run `gulp watch`. It is essentially an [M-Ionic-scaffolded](https://github.com/mwaylabs/generator-m-ionic) app. The CouchDB remote is using the [SmileUpps CouchDB hosting](https://www.smileupps.com/free-couchdb-hosting#freetiereligibility)
+Clone this repo and just run `gulp watch`. It is essentially an [M-Ionic-scaffolded](https://github.com/mwaylabs/generator-m-ionic) app. The CouchDB remote is using the [SmileUpps CouchDB free hosting](https://www.smileupps.com/free-couchdb-hosting#freetiereligibility), so it may not be up when you are reading this.
 
 
 ## License
