@@ -5,10 +5,10 @@ This is an Ionic app which is initially started to explore the sync capabilities
 
 <p align="center">
  
-    <img src="http://1zaak.github.io/ionic-chat-1.png">
+    <img src="http://izaak.my/ionic-chat-1.png">
   
   
-    <img src="http://1zaak.github.io/ionic-chat-2.png">
+    <img src="http://izaak.my/ionic-chat-2.png">
   
   
 </p>
